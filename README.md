@@ -1,4 +1,4 @@
-# I hope I can edit this document on the editor,change it!
+# 北大C++程序设计 公开课——学习笔记
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+视频网址：[https://courses.edx.org/courses/course-v1:PekingX+04831750.1x+2015T1/course/\#block-v1:PekingX+04831750.1x+2015T1+type@sequential+block@7232357c324945f8b872a2d4d0d18a26](https://courses.edx.org/courses/course-v1:PekingX+04831750.1x+2015T1/course/#block-v1:PekingX+04831750.1x+2015T1+type@sequential+block@7232357c324945f8b872a2d4d0d18a26)
 
