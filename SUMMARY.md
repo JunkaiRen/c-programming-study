@@ -11,4 +11,5 @@
   * [位运算](chapter1/wei-yun-suan.md)
   * [引用](chapter1/yin-yong.md)
   * [const关键字和常量](chapter1/constguan-jian-zi-he-chang-liang.md)
+  * [动态内存分配](chapter1/dong-tai-nei-cun-fen-pei.md)
 
