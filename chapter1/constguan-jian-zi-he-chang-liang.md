@@ -1,6 +1,6 @@
-const关键字
+# const关键字
 
-1  定义常量\(const是有类型性的，便于类型检查。少用define\)
+#### 1、定义常量\(const是有类型性的，便于类型检查。少用define\)
 
 ```
 const int MAX_VAL=23;    //定义了一个整型常量
@@ -8,7 +8,7 @@ const double Pi = 3.14;    //定义了一个浮点型常量
 const char*SCHOOL_NAME="Peking University";    //char*类型的常量，字符串指针的常量，SCHOOL_NAME就是一个指针常量。2
 ```
 
-2  定义常量指针
+#### 2、定义常量指针
 
 * 注意：不可以通过常量指针修改其指向的内容
 
@@ -39,7 +39,7 @@ void MyPrintf(const char*p)
 }
 ```
 
-3  定义常引用
+#### 3、定义常引用
 
 不能通过常引用修改其引用的变量
 
