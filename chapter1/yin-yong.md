@@ -46,7 +46,7 @@ int n1,n2;
 swap(&n1,&n2);    //参数变成了n1和n2的地址；n1,n2的值会被交换。
 
 方法三（正确）使用了C++的引用
-void swap(int&a,int&b)
+void swap(int &a,int &b)
 {
     int tmp;
     tmp=a;a=b;b=tmp;
@@ -91,8 +91,4 @@ n=300;    //没问题
 ### 3.  常引用和非常引用的转换
 
 ![](/assets/Screenshot from 2017-06-06 00:19:38.png)
-
-
-
-
 
