@@ -72,13 +72,19 @@ int main(){
   CRectangle * p1 = & r1;      //用CRectangle类型定义指针*p1和*p2，分别指向r1和r2这两个对象的首地址。
   CRectangle * p2 = & r2;
   p1 -> w = 5;           //之后就可以用p1和p2来指向对应的w和Init函数。
-  p2 -> Init(3,4);       //Init作用在p2指向的对象r2上
+  p2 -> Init(3,4);       //Init作用在p2指向的对象r2
   ```
 
-* 用法3：引用名.成员名
+* 用法3：**引用名**.成员名
 
-* 
-* 
+  ```
+  CRectangle r2;
+  CRectangle & rr = r2;    //rr就是r2的一个别名
+  rr.w = 5;
+  rr.Init(3,4);    //rr的值改变了，r2的值也会改变
+
+  ```
+
 ---
 
 课程视频：[https://courses.edx.org/courses/course-v1:PekingX+04831750.1x+2015T1/courseware/ead35a945fe64078b09a03272620ed3a/b61817773f6e43d7af6b6284efc9b316/?child=first](https://courses.edx.org/courses/course-v1:PekingX+04831750.1x+2015T1/courseware/ead35a945fe64078b09a03272620ed3a/b61817773f6e43d7af6b6284efc9b316/?child=first)
