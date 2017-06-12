@@ -15,4 +15,5 @@
   * [const关键字和常量](chapter1/constguan-jian-zi-he-chang-liang.md)
   * [动态内存分配](chapter1/dong-tai-nei-cun-fen-pei.md)
   * [内联函数和重载函数](chapter1/nei-lian-han-shu-he-zhong-zai-han-shu.md)
+  * [函数的缺省参数](chapter1/han-shu-de-que-sheng-can-shu.md)
 
