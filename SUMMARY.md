@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Chapter 1：C语言回顾](chapter1.md)
+* [Chapter 1：从C走进C++](chapter1.md)
   * [指针](chapter1/zhi-zhen.md)
     * [指针的基本概念和用法](chapter1/zhi-zhen/zhi-zhen-de-ji-ben-gai-nian-he-yong-fa.md)
     * [指针的意义和相互赋值](chapter1/zhi-zhen/zhi-zhen-de-yi-yi-he-xiang-hu-fu-zhi.md)
@@ -16,4 +16,6 @@
   * [动态内存分配](chapter1/dong-tai-nei-cun-fen-pei.md)
   * [内联函数和重载函数](chapter1/nei-lian-han-shu-he-zhong-zai-han-shu.md)
   * [函数的缺省参数](chapter1/han-shu-de-que-sheng-can-shu.md)
+* [Chapter 2：类和对象初探](chapter-2ff1a-lei-he-dui-xiang-chu-tan.md)
+  * [面向对象程序设计方法](chapter-2ff1a-lei-he-dui-xiang-chu-tan/mian-xiang-dui-xiang-cheng-xu-she-ji-fang-fa.md)
 
