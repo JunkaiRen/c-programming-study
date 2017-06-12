@@ -8,7 +8,9 @@
 
 ![](/assets/Screenshot from 2017-06-12 22:37:43.png)
 
-       类的具体实现（类定义）：
+```
+   类的具体实现（类定义）：
+```
 
 ```
 class CRectangle {
@@ -26,7 +28,9 @@ class CRectangle {
 };//必须有分号
 ```
 
-* 使用上面创建的矩形类（类的实例化），类定义的**变量**→  类的**实例**→  “**对象**”
+* 使用上面创建的矩形类（类的实例化），类定义的**变量**→
+  类的**实例**→
+  “**对象**”
 
 ```
 int main(){
@@ -46,7 +50,10 @@ int main(){
    2. E.g. CRectangle类的对象，sizeof\(CRectangle\)=8，即2个int的大小
 2. 每个对象各有自己的存储空间
    1. 一个对象的某个成员变量被改变，不会影响到其他的对象。
-3. 
+3. 对象之间可以使用“=”进行赋值
+
+4. 不能用“==”，“！=”，“&gt;”，“&lt;”，“&gt;=”，“&lt;=”进行比较，除非这些运算符经过了重载。
+
 ---
 
 课程视频：[https://courses.edx.org/courses/course-v1:PekingX+04831750.1x+2015T1/courseware/ead35a945fe64078b09a03272620ed3a/b61817773f6e43d7af6b6284efc9b316/?child=first](https://courses.edx.org/courses/course-v1:PekingX+04831750.1x+2015T1/courseware/ead35a945fe64078b09a03272620ed3a/b61817773f6e43d7af6b6284efc9b316/?child=first)
