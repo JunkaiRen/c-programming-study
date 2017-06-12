@@ -58,23 +58,24 @@ int main(){
 
 * 用法1：对象名.成员名
 
-  * CRectangle r1,r2;
-
-    ```
-      r1.w = 5;        //通过成员变量w，把5赋值给对象r1里面的w。
-      r2.Init\(3,4\);    //通过成员函数Init()，把3和4分别赋值给对象r2里面的w和h。
-    ```
+  ```
+  CRectangle r1,r2;
+  r1.w = 5;        //通过成员变量w，把5赋值给对象r1里面的w。
+  r2.Init\(3,4\);    //通过成员函数Init()，把3和4分别赋值给对象r2里面的w和h。
+  ```
 
 * 用法2：指针 -&gt; 成员名
 
-  * CRectangle r1,r2;
+  ```
+  CRectangle r1,r2;
+  CRectangle r1,r2;
+  CRectangle * p1 = & r1;      //用CRectangle类型定义指针*p1和*p2，分别指向r1和r2这两个对象的首地址。
+  CRectangle * p2 = & r2;
+  p1 -> w = 5;           //之后就可以用p1和p2来指向对应的w和Init函数。
+  p2 -> Init(3,4);       //Init作用在p2指向的对象r2上
+  ```
 
-    ```
-      CRectangle \* p1 = & r1;      //用CRectangle类型定义指针*p1和*p2，分别指向r1和r2这两个对象的首地址。
-      CRectangle \* p2 = & r2;
-      p1 -&gt; w = 5;           //之后就可以用p1和p2来指向对应的w和Init函数。
-      p2 -&gt; Init\(3,4\);       //Init作用在p2指向的对象r2上
-    ```
+* 用法3：引用名.成员名
 
 * 
 * 
