@@ -56,7 +56,7 @@ int main(){
 
 #### 3、访问类的成员变量和成员函数
 
-* 用法1：对象名.成员名
+* **用法1：对象名.成员名**
 
   ```
   CRectangle r1,r2;
@@ -82,8 +82,45 @@ int main(){
   CRectangle & rr = r2;    //rr就是r2的一个别名
   rr.w = 5;
   rr.Init(3,4);    //rr的值改变了，r2的值也会改变
-
   ```
+
+\*另一种输出结果的方式
+
+```
+void PrintRectangle(CRectangle & r){
+    cout << r.Area() << "," << r.Perimeter();
+}
+CRectangle r3;
+r3.Init(3,4);
+PrintRectangle r3;
+```
+
+#### 4、成员函数体和类的定义分开写，利用"**::**"
+
+* 之前我们把类的成员函数的定义写在类的定义中间。我们还可以把成员函数从类的定义中分离出来，只在类定义里面声明这个类里面包含了这一系列的成员函数，而具体的函数的定义则放在整个类的定义之外。
+
+```
+class CRectangle
+{
+    public:
+        int w,h;
+        int Area();    //仅在此声明成员函数
+        int Perimeter();
+        void Init(int w_,int h_);
+};
+
+int CRectangle::Area(){    //利用CRectangle::这样的一个标记去声明这三个函数不是普通意义上的函数，它是属于CRectangle类的。
+    return w * h;          //这样三个函数就可以作为类的成员函数来进行定义了
+}
+int Crectangle::Perimeter(){
+    return 2 * (w + h);
+}
+void CRectangle::Init(int w_,int h_){
+    w = w_; h = h_;
+}
+```
+
+* 注意，同样的，在调用这些类的成员函数的时候，仍然需要使用对象、对象的指针或者是对象的引用来进行，它也不能作为普通函数来进行访问。
 
 ---
 
