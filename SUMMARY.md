@@ -19,4 +19,5 @@
 * [Chapter 2：类和对象初探](chapter-2ff1a-lei-he-dui-xiang-chu-tan.md)
   * [面向对象程序设计方法](chapter-2ff1a-lei-he-dui-xiang-chu-tan/mian-xiang-dui-xiang-cheng-xu-she-ji-fang-fa.md)
   * [面向对象程序设计语言的发展历程](chapter-2ff1a-lei-he-dui-xiang-chu-tan/mian-xiang-dui-xiang-cheng-xu-she-ji-yu-yan-de-fa-zhan-li-cheng.md)
+  * [从客观事物抽象出类](chapter-2ff1a-lei-he-dui-xiang-chu-tan/cong-ke-guan-shi-wu-chou-xiang-chu-lei.md)
 
