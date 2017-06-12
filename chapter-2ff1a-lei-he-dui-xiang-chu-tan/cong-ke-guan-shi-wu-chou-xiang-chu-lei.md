@@ -1,6 +1,6 @@
-从客观事物抽象出类的例子
+### 从客观事物抽象出类的例子
 
-1、例子
+#### 1、例子
 
 ![](/assets/Screenshot from 2017-06-12 22:34:55.png)
 
@@ -43,17 +43,41 @@ int main(){
 }
 ```
 
-2、对象的内存分配
+#### 2、对象的内存分配
 
-1. 对象的内存空间
-   1. 对象的大小=所有成员变量的大小之和
-   2. E.g. CRectangle类的对象，sizeof\(CRectangle\)=8，即2个int的大小
-2. 每个对象各有自己的存储空间
-   1. 一个对象的某个成员变量被改变，不会影响到其他的对象。
-3. 对象之间可以使用“=”进行赋值
+* 对象的内存空间
+  1. 对象的大小=所有成员变量的大小之和
+  2. E.g. CRectangle类的对象，sizeof\(CRectangle\)=8，即2个int的大小
+* 每个对象各有自己的存储空间
+  1. 一个对象的某个成员变量被改变，不会影响到其他的对象。
+* 对象之间可以使用“=”进行赋值
 
-4. 不能用“==”，“！=”，“&gt;”，“&lt;”，“&gt;=”，“&lt;=”进行比较，除非这些运算符经过了重载。
+* 不能用“==”，“！=”，“&gt;”，“&lt;”，“&gt;=”，“&lt;=”进行比较，除非这些运算符经过了重载。
 
+#### 3、访问类的成员变量和成员函数
+
+* 用法1：对象名.成员名
+
+  * CRectangle r1,r2;
+
+    ```
+      r1.w = 5;        //通过成员变量w，把5赋值给对象r1里面的w。
+      r2.Init\(3,4\);    //通过成员函数Init()，把3和4分别赋值给对象r2里面的w和h。
+    ```
+
+* 用法2：指针 -&gt; 成员名
+
+  * CRectangle r1,r2;
+
+    ```
+      CRectangle \* p1 = & r1;      //用CRectangle类型定义指针*p1和*p2，分别指向r1和r2这两个对象的首地址。
+      CRectangle \* p2 = & r2;
+      p1 -&gt; w = 5;           //之后就可以用p1和p2来指向对应的w和Init函数。
+      p2 -&gt; Init\(3,4\);       //Init作用在p2指向的对象r2上
+    ```
+
+* 
+* 
 ---
 
 课程视频：[https://courses.edx.org/courses/course-v1:PekingX+04831750.1x+2015T1/courseware/ead35a945fe64078b09a03272620ed3a/b61817773f6e43d7af6b6284efc9b316/?child=first](https://courses.edx.org/courses/course-v1:PekingX+04831750.1x+2015T1/courseware/ead35a945fe64078b09a03272620ed3a/b61817773f6e43d7af6b6284efc9b316/?child=first)
