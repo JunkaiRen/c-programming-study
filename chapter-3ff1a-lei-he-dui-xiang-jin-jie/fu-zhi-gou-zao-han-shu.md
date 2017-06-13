@@ -102,5 +102,20 @@ class CSample{
      4
      ```
 
+\*为什么要自己写复制构造函数？
+
+后面我们会讲到，有的时候你是必须要写自己的复制构造函数，否则你的程序就会出错。那这个就下回分解。
+
+---
+
+课程视频：[https://courses.edx.org/courses/course-v1:PekingX+04831750.1x+2015T1/courseware/f0484398342241b7be57dfa9f31a2e65/188ff44d5a1e4114946741803abaf969/?activate\_block\_id=block-v1%3APekingX%2B04831750.1x%2B2015T1%2Btype%40sequential%2Bblock%40188ff44d5a1e4114946741803abaf969](https://courses.edx.org/courses/course-v1:PekingX+04831750.1x+2015T1/courseware/f0484398342241b7be57dfa9f31a2e65/188ff44d5a1e4114946741803abaf969/?activate_block_id=block-v1%3APekingX%2B04831750.1x%2B2015T1%2Btype%40sequential%2Bblock%40188ff44d5a1e4114946741803abaf969)
+
+2017.06.13
+
+
+
+  
+
+
 
 
