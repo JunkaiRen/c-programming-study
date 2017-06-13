@@ -48,6 +48,8 @@ Complex * pc=new Complex(3,4);    //
 
 * 一个类可以有多个构造函数，只要多个构造函数的参数个数或类型不同，这多个构造函数就构成了重载的关系。多个构造函数分别在什么情况下起作用？就得看定义对象的时候给了什么样的参数。
 
+eg：多个构造函数的调用
+
 ```
 class Complex{
     private:
@@ -76,6 +78,8 @@ Complex c1(3),c2(1,0),c3(c1,c2);    //由于整型参数可以被自动转化成
 ```
 
 构造函数在数组中的使用（注意：类的对象为数组，指的是数组里的每个元素都是类的对象）
+
+eg1：
 
 ```
 class CSample{
@@ -113,6 +117,21 @@ Constructor 2 Called
 step3
 Constructor 1 Called
 Constructor 1 Called
+```
+
+eg2：
+
+```
+class Test{
+    public:
+        Test(int n){}            //(1)
+        Test(int n,int m){}      //(2)
+        Test(){}                 //(3)
+};
+Test array1[3]={1,Test(1,2)};    //3个元素分别用(1),(2),(3)初始化
+Test array2[3]={Test(2,3),Test(1,2),1};    //3个元素分别用(2),(2),(1)初始化
+Test * pArray3[3]={new Test(4),new Test(1,2)};    //3个元素分别用(2),(2),(1)初始化，用new出来的地址去初始化指针数组里的元素（指针）
+//pArray3[]是一个指针数组（而非对象数组），里面的每个元素都是一个指针而非对象，所以不需要初始化，pArray[2]就是一个没有初始化的指针
 ```
 
 
