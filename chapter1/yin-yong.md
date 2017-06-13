@@ -60,7 +60,7 @@ eg2：引用作为函数的返回值来**修改全局变量**
 
 ```
 int n=4;
-int&SetValue(){ return n; }    //SetValue()的返回值是一个引用，此处即引用了n
+int & SetValue(){ return n; }    //SetValue()的返回值是一个引用，此处即引用了n
 int main()
 {
     SetValue()=40;    //此处对函数调用的返回值进行赋值，等价于对n进行赋值
@@ -75,7 +75,7 @@ int main()
 
 ```
 int n;
-const int& r=n;    //r就是一个常引用，r的类型为const int&
+const int & r=n;    //r就是一个常引用，r的类型为const int&
 ```
 
 * 特点：不能通过常引用去修改其引用的内容。

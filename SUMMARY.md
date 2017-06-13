@@ -23,4 +23,6 @@
   * [类成员的可访问范围](chapter-2ff1a-lei-he-dui-xiang-chu-tan/lei-cheng-yuan-de-ke-fang-wen-fan-wei.md)
   * [内联成员函数和重载成员函数](chapter-2ff1a-lei-he-dui-xiang-chu-tan/nei-lian-cheng-yuan-han-shu-he-zhong-zai-cheng-yuan-han-shu.md)
   * [构造函数](chapter-2ff1a-lei-he-dui-xiang-chu-tan/gou-zao-han-shu.md)
+* [Chapter 3：类和对象进阶](chapter-3ff1a-lei-he-dui-xiang-jin-jie.md)
+  * [复制构造函数](chapter-3ff1a-lei-he-dui-xiang-jin-jie/fu-zhi-gou-zao-han-shu.md)
 
