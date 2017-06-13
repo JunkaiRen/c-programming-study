@@ -43,14 +43,64 @@ class CSample{
 ```
 
 * 复制构造函数起作用的三种情况
+
   1. 当用一个对象去初始化同类的另一个对象时
 
-  ```
-  Complex c2(c1);
-  Complex c2=c1;
-  ```
+     ```
+     Complex c2(c1);
+     Complex c2=c1;    //同上一条语句等价，初始化语句，非赋值语句。c2由复制构造函数初始化，初始化参数为c1
+     ```
 
-  1. 如果某函数有一个参数是类A的对象
+  2. 如果某函数有一个参数是类A的对象，那么该函数被调用时，类A的复制构造函数将被调用，进而初始化函数的形参
+
+     ```
+     class A
+     {
+         public:
+         A(){};
+         A(A & a){
+             cout<<"Copy constructor called"<<endl;    //自己编写的复制构造函数
+         }
+     };
+     ---
+     void Func(A a1){ }    //函数的形参a1是类A的对象，a1默认由上面自定义的复制构造函数初始化
+     int main(){
+         A a2;
+         Func(a2);    //函数被调用，以a2为参数（实参）。而函数的形参a1是由复制构造函数初始化的。
+         return 0;
+     }
+     ---
+     输出
+     Copy constructor called
+     ```
+
+  3. 如果构造函数的返回值是类A的对象时，则函数返回时，A的复制构造函数被调用，用于初始化作为返回值存在的类A的对象。
+
+     ```
+     class A
+     {
+         public:
+         int v;
+         A(int n){ v=n; };
+         A(const A & a){
+             v=a.v;
+             cout<<"Copy constructor called"<<endl;    //自己编写的复制构造函数
+         }
+     };
+     ---
+     A Func(){
+         A b(4);        //定义了一个局部对象b
+         return b;
+     }
+     int main(){
+         cout<<Func().v<<endl;    //调用函数Func(),它的返回值是一个对象，接下来取该对象的v成员变量
+         return 0;                //在对象被生成的时候，就会调用构造函数，按照规则3，就会用复制构造函数初始化，即输出Copy constructor called
+     }                            //调用的复制构造函数的参数是b，因此返回值就是b，所以v就是b.v,即4，输出4
+     ---
+     输出
+     Copy constructor called
+     4
+     ```
 
 
 
