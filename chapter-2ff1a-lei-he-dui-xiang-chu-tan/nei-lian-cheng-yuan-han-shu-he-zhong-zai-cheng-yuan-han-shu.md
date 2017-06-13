@@ -1,13 +1,13 @@
 ### 内联成员函数和重载成员函数
 
-1. 内联成员函数定义方式
+1. #### 内联成员函数定义方式
 
    * inline + 成员函数
    * 整个函数体出现在类定义内部
 
    eg：方法1和方法2均定义了两个函数位内联成员函数
 
-2. 成员函数的重载及参数缺省
+2. #### 成员函数的重载及参数缺省
 
    * 重载成员函数
    * 成员函数可以带缺省值
@@ -36,8 +36,8 @@
        return 0;
    }
    ```
+3. #### 使用缺省参数时，要注意**避免**有函数重载时的**二义性**
 
-1. 使用缺省参数时，要注意**避免**有函数重载时的**二义性**
    ```
    class Location{
        private:
@@ -50,6 +50,14 @@
        Location A;
        A.valueX();    //错误！！编译器无法判断调用那个value
    ```
+
+---
+
+课程视频：[https://courses.edx.org/courses/course-v1:PekingX+04831750.1x+2015T1/courseware/ead35a945fe64078b09a03272620ed3a/b61817773f6e43d7af6b6284efc9b316/?child=first](https://courses.edx.org/courses/course-v1:PekingX+04831750.1x+2015T1/courseware/ead35a945fe64078b09a03272620ed3a/b61817773f6e43d7af6b6284efc9b316/?child=first)
+
+2017.06.13
+
+
 
 
 
