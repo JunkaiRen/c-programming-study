@@ -22,4 +22,5 @@
   * [从客观事物抽象出类](chapter-2ff1a-lei-he-dui-xiang-chu-tan/cong-ke-guan-shi-wu-chou-xiang-chu-lei.md)
   * [类成员的可访问范围](chapter-2ff1a-lei-he-dui-xiang-chu-tan/lei-cheng-yuan-de-ke-fang-wen-fan-wei.md)
   * [内联成员函数和重载成员函数](chapter-2ff1a-lei-he-dui-xiang-chu-tan/nei-lian-cheng-yuan-han-shu-he-zhong-zai-cheng-yuan-han-shu.md)
+  * [构造函数](chapter-2ff1a-lei-he-dui-xiang-chu-tan/gou-zao-han-shu.md)
 
