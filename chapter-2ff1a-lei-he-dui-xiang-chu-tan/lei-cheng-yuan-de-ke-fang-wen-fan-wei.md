@@ -39,11 +39,10 @@ class Man{
 * 类的成员函数以外的地方
   * 只能访问该类对象的公有成员
 
-![](/assets/Screenshot from 2017-06-13 09:56:19.png)
+       ![](/assets/Screenshot from 2017-06-13 09:56:19.png)
 
+        ![](/assets/Screenshot from 2017-06-13 09:55:09.png)
 
-
-* 
 * 
 ---
 
