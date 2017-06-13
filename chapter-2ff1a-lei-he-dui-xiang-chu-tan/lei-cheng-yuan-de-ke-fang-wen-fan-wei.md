@@ -42,11 +42,13 @@ class Man{
 
     ![](/assets/Screenshot from 2017-06-13 09:56:19.png)
 
-      ![](/assets/Screenshot from 2017-06-13 09:55:09.png)
+    ![](/assets/Screenshot from 2017-06-13 09:55:09.png)
 
   * 我们强制要求对成员变量的访问一定要通过成员函数，这样的好处呢，就可以有效地把私有成员呢隐藏起来，它不会暴露在非常公开的地方，所有的函数或者是程序员都可以对它进行访问，而是需要通过成员函数来进行。那么有了这样的机制呢，可以保证我们的程序呢，少出错，同时呢，也容易修改。
 
-* 
+  * 我们来具体看一看说，如果我的这个程序现在从PC呢迁移到了手机上，那么我的szName呢不再是一个20个的一个数组，它只能允许呢包含5个成员。即 szName→    char szName\[5\]
+    * 
+
 ---
 
 课程视频：[https://courses.edx.org/courses/course-v1:PekingX+04831750.1x+2015T1/courseware/ead35a945fe64078b09a03272620ed3a/b61817773f6e43d7af6b6284efc9b316/?child=first](https://courses.edx.org/courses/course-v1:PekingX+04831750.1x+2015T1/courseware/ead35a945fe64078b09a03272620ed3a/b61817773f6e43d7af6b6284efc9b316/?child=first)
