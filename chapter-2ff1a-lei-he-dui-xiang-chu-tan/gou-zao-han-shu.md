@@ -46,7 +46,7 @@ Complex c1(2,4),c2(3,5);    //OK
 Complex * pc=new Complex(3,4);    //
 ```
 
-可以有多个构造函数，参数个数或类型不同。多个构造函数分别在什么情况下起作用呢？就得看定义对象的时候给了什么样的参数。
+* 可以有多个构造函数，参数个数或类型不同。多个构造函数分别在什么情况下起作用？就得看定义对象的时候给了什么样的参数。
 
 ```
 class Complex{
@@ -58,10 +58,21 @@ class Complex{
         Complex(double r);
         Complex（Complex c1,Complex c2）;
 }；
+
 Complex::Complex(double r,double i)
 {
     real=r;imag=i;
 }
+Complex::Complex(double r)
+{
+    real=r;imag=0;
+}
+Complex::Complex(Complex c1,Complex c2)
+{
+    real=c1.real+c2.real;imag=c1.imag+c2.imag;
+}
+
+Complex c1(3),c2(1,0),c3(c1,c2);    //由于整型参数可以被自动转化成double类型的，所以c1={3,0},c2={1,0},c3={4,0};
 ```
 
 
