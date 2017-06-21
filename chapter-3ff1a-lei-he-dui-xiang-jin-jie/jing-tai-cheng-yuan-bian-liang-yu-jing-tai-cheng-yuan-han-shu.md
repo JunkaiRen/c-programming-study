@@ -54,7 +54,7 @@ class CMyclass{
 
 ### 静态成员示例
 
-考虑一个需要随时知道矩形总数和矩形面积的图形处理程序，可以用全局变量记录总是和总面积，但是**用静态成员将这两个变量封装进类中，就更容易理解和维护**。
+考虑一个需要随时知道矩形总数和矩形面积的图形处理程序，可以用全局变量记录总数和总面积，但是**用静态成员将这两个变量封装进类中，就更容易理解和维护**。
 
 ```java
 class CRectangle
@@ -80,14 +80,28 @@ CRectangle::CRectangle(int w_,int h_)
 }
 CRectangle::~CRectangle()
 {
-    nTotalNumber --;
-    nTotalArea - = w*h;
+    nTotalNumber --;        //由于矩形对象可能消亡，比如一个局部的矩形变量，在出了包含它的函数后就消亡了，这是矩形的总数和总面积就减少了
+    nTotalArea - = w*h;   //因此需要在CRectangle类的析构函数里减少TotalNumber和TotalArea。
 }
 void CRectangle::PrintTotal()
 {
-    cout<<nTotalNumber<<","<<nTotalArea<<endl;
+    cout<<nTotalNumber<<","<<nTotalArea<<endl;    //打印nTotalNumber和nTotalArea
+}
+
+———————————
+
+int CRectangle::nTotalNumber = 0;
+int CRectangle::nTotalArea = 0;    //在C++中必须在定义类的文件中对静态成员变量进行一次说明或初始化，否则编译能通过但连接通不过。
+
+int main()
+{
+    CRectangle r1(3,3),r2(2,2);
+    //Cout << CRectangle::nTotalNumber;
+    CRectangle::PrintTotal();
+    r1.PrintTotal();
+    return 0;
 }
 ```
 
-
+在C++中，静态成员变量变必须拿到所有成员函数外面单独声明一下（类型 类名::变量名），声明的同时可以进行初始化，否则编译能通过但连接通不过。
 
