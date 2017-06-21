@@ -71,14 +71,14 @@ class CRectangle
 
 ——————————
 
-CRectangle::CRectangle(int w_,int h_)
+CRectangle::CRectangle(int w_,int h_)    //构造函数
 {
     w=w_;
     h=h_;
     nTotalNumber ++;        //因为只有有矩形对象的生成，就一定会引发构造函数的调用，因此在构造函数里既可以增加矩形的总数和总面积。
     nTotalArea + = w*h;
 }
-CRectangle::~CRectangle()
+CRectangle::~CRectangle()    //析构函数
 {
     nTotalNumber --;        //由于矩形对象可能消亡，比如一个局部的矩形变量，在出了包含它的函数后就消亡了，这是矩形的总数和总面积就减少了
     nTotalArea - = w*h;   //因此需要在CRectangle类的析构函数里减少TotalNumber和TotalArea。
