@@ -91,12 +91,16 @@
                       cout<<"id="<<id<<"Distructed"<<endl;
               }
   };
-  Demo d1(1);        //a.定义了一个全局变量的对象，1为变量，输出id=1 Constructed
+
+  Demo d1(1);                       //a.定义了一个全局变量的对象，1为变量，输出id=1 Constructed
   void Func(){
-          static Demo d2(2);        //g1.
-          Demo d3(3)                //g2.
-          cout<<"Func"<<endl;       //g3.
+          static Demo d2(2);        //g1.定义静态变量d2，输出id=2 Constructed
+          Demo d3(3)                //g2.定义全局变量d3，输出id=3 Constructed
+          cout<<"Func"<<endl;       //g3.打印输出Func，输出Func
+                                    //g4.Func()函数结束，在这对花括号{}的作用域里包含了两个变量d2和d3.因为d2是静态的，
+                                //静态变量的消亡会在整个程序结束之时，因此在这个作用域下消亡的只有d3，输出id=3 Distructed
   }
+
   int main(){                //b.程序进入main函数
           Demo d4(4);        //c.定义了一个局部变量d4,4为变量，输出id=4 Constructed
           d4=6;              //d.有了d4这个对象之后，执行这一条赋值语句，把常量赋值给d4.此处调用类型转换构造函数
@@ -104,11 +108,28 @@
                           //同时当这个临时对象消亡时，又要将这个临时对象析构掉，因此输出id=6 Distructed
           cout<<"main"<<endl;        //e.输出main
           {    Demo d5(5)  }         //f.{}为作用域，语法规定离对象最近的一对{}表示对象的作用域，因此输出id=5 Constructed和id=5 Distructed
-          Func();                //g.进入Func()这样一个函数
-          cout << "main ends"<<endl;
-          return 0;
-
+          Func();                    //g.进入Func()这样一个函数
+          cout << "main ends"<<endl; //h.输出main ends
+          return 0;                  //i.全局变量d1，静态变量d2，main函数定义的局部变量d4都还没有消亡
+                                  //析构顺序为“先被构造的对象会最后被析构掉”，因此输出顺序为：id=6 Distructed；id=2 Distructed；id=1 Distructed
   }
+  ————————
+  输出
+  id=1 Constructed
+  id=4 Constructed
+  id=6 Constructed
+  id=6 Destructed
+  main
+  id=5 Constructed
+  id=5 Destructed
+  id=2 Constructed
+  id=3 Constructed
+  Func
+  id=3 Destructed
+  main ends
+  id=6 Destructed
+  id=2 Destructed
+  id=1 Destructed
   ```
 
 * 构造函数和析构函数在不同编译器中的表现
