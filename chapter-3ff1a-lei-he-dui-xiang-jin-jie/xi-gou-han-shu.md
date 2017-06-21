@@ -22,7 +22,7 @@
     * 不涉及释放用户申请的内存释放等清理工作
   * 定义了析构函数，则编译器不生成缺省的析构函数
 
-    ```
+    ```python
     class String{
         private：
             char * p;
@@ -41,7 +41,7 @@
 
   * 对象数组生命期结束时，对象数组的**每个元素**的**析构函数**都会被调用
 
-    ```
+    ```python
     class Ctest{
         public:
             ~Ctest(){
@@ -64,7 +64,7 @@
 
   * 使用delete语句也可以导致析构函数的调用
 
-    ```
+    ```python
     Ctest * pTest;
     pTest = new Ctest;    //pTest指向new出来的一个Ctest,每次调用new的时候都会使得构造函数被调用到
     delete pTest;         //在new出一片内存空间后，要释放时就需要delete掉，只要使用delete运算，就会调用一个相应的析构函数
@@ -74,7 +74,9 @@
     ```
 * #### 构造函数和析构函数调用时机的例题
 
-  ```
+
+  ```python
+
   class Demo{
           int id;
       public:
