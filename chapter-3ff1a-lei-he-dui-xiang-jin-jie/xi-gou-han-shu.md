@@ -92,7 +92,7 @@
   Demo d1(1);                       //a.定义了一个全局变量的对象，1为变量，输出id=1 Constructed
   void Func(){
           static Demo d2(2);        //g1.定义静态变量d2，输出id=2 Constructed
-          Demo d3(3)                //g2.定义全局变量d3，输出id=3 Constructed
+          Demo d3(3)                //g2.定义变量d3，输出id=3 Constructed
           cout<<"Func"<<endl;       //g3.打印输出Func，输出Func
                                     //g4.Func()函数结束，在这对花括号{}的作用域里包含了两个变量d2和d3.因为d2是静态的，
                                 //静态变量的消亡会在整个程序结束之时，因此在这个作用域下消亡的只有d3，输出id=3 Distructed
