@@ -119,5 +119,18 @@ CRectangle::PrintTotal();    //解释不通，w到底是属于那个对象的
 
 自己写了构造函数，因此编译器不会生成无参构造函数，但是编译器依然会生成复制构造函数。在使用CRectangle类时，有时会调用复制构造函数生成**隐藏的CRectangle对象**。比如调用一个CRectangle类对象作为参数的函数时，调用一个CRectangle类对象作为返回值的函数时。这样就会导致总数和总面积比实际情况要少（生成对象的时候没有增加总是，但消亡的时候减掉了总数）
 
-此外，临时对象在消亡的时候也会调用析构函数，减少nToTalNumber和nTotalArea的值，可是这些临时对象在生成时并没有增加nTotalNumber和nTotalArea的值。
+此外，临时对象在消亡的时候也会调用析构函数（例如一个函数的返回值是对象的话，则这个函数的返回值就是一个临时对象），减少nToTalNumber和nTotalArea的值，可是这些临时对象在生成时并没有增加nTotalNumber和nTotalArea的值。
+
+解决办法：为CRectangle类写一个复制构造函数,在这个复制构造函数里面，除了做复制的工作以外，还要对这个两个总数进行修改，这个时候就不会发生对象生成没有增加总数，对象消亡却减掉了总数这个怪异的现象。
+
+```
+CRectangle::CRectangle(CRectangle & r)
+{
+    w=r.w;h=r.h;
+    nTotalNumber ++;
+    nTotalArea + =w*h;
+}
+```
+
+
 
