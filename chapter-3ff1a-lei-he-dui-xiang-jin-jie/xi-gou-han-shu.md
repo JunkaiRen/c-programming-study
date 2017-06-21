@@ -138,5 +138,9 @@
 
   * 这里讨论的是C++标准
 
+---
 
+课程视频：[https://courses.edx.org/courses/course-v1:PekingX+04831750.1x+2015T1/courseware/f0484398342241b7be57dfa9f31a2e65/188ff44d5a1e4114946741803abaf969/?activate\_block\_id=block-v1%3APekingX%2B04831750.1x%2B2015T1%2Btype%40sequential%2Bblock%40188ff44d5a1e4114946741803abaf969\#](https://courses.edx.org/courses/course-v1:PekingX+04831750.1x+2015T1/courseware/f0484398342241b7be57dfa9f31a2e65/188ff44d5a1e4114946741803abaf969/?activate_block_id=block-v1%3APekingX%2B04831750.1x%2B2015T1%2Btype%40sequential%2Bblock%40188ff44d5a1e4114946741803abaf969#)
+
+2017.06.21
 
