@@ -77,7 +77,49 @@
 
 * 构造函数和析构函数调用时机的例题
 
-* 1
+  ```
+  class Demo{
+          int id;
+      public:
+              Demo(int i)        //定义构造函数来进行初始化的传递
+              {
+                      id=i;
+                      cout<<"id="<<id<<"Constructed"<<endl;
+              }
+              ~Demo()        //定义析构函数，即对应id的对象会被消亡掉
+              {
+                      cout<<"id="<<id<<"Distructed"<<endl;
+              }
+  };
+  Demo d1(1);        //a.定义了一个全局变量的对象，1为变量，输出id=1 Constructed
+  void Func(){
+          static Demo d2(2);        //g1.
+          Demo d3(3)                //g2.
+          cout<<"Func"<<endl;       //g3.
+  }
+  int main(){                //b.程序进入main函数
+          Demo d4(4);        //c.定义了一个局部变量d4,4为变量，输出id=4 Constructed
+          d4=6;              //d.有了d4这个对象之后，执行这一条赋值语句，把常量赋值给d4.此处调用类型转换构造函数
+                          //通过生成一个临时的demo对象，把6赋值给相应的d4，因此输出id=6 Constructed
+                          //同时当这个临时对象消亡时，又要将这个临时对象析构掉，因此输出id=6 Distructed
+          cout<<"main"<<endl;        //e.输出main
+          {    Demo d5(5)  }         //f.{}为作用域，语法规定离对象最近的一对{}表示对象的作用域，因此输出id=5 Constructed和id=5 Distructed
+          Func();                //g.进入Func()这样一个函数
+          cout << "main ends"<<endl;
+          return 0;
+
+  }
+  ```
+
+* 构造函数和析构函数在不同编译器中的表现
+
+  * 个别调用情况不一致
+
+    * 编译器有bug
+
+    * 代码优化措施
+
+  * 这里讨论的是C++标准
 
 
 
