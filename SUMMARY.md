@@ -26,4 +26,5 @@
 * [Chapter 3：类和对象进阶](chapter-3ff1a-lei-he-dui-xiang-jin-jie.md)
   * [复制构造函数](chapter-3ff1a-lei-he-dui-xiang-jin-jie/fu-zhi-gou-zao-han-shu.md)
   * [类型转换构造函数](chapter-3ff1a-lei-he-dui-xiang-jin-jie/lei-xing-zhuan-huan-gou-zao-han-shu.md)
+  * [析构函数](chapter-3ff1a-lei-he-dui-xiang-jin-jie/xi-gou-han-shu.md)
 
