@@ -37,7 +37,7 @@ int main(){
 }
 ```
 
-* [x] 在例子中，如果CCar类_不定义构造函数_，则
+* [x] 在eg1中，如果CCar类_不定义构造函数_，则
 
   ```
   CCar car;    //error——>编译出错
@@ -73,11 +73,11 @@ int main(){
   * 和成员对象在类中的说明顺序一致
   * 与在成员初始化列表中出现的顺序无关
 * 当封闭类的**对象消亡**时  （先构造的后析构，后构造的先析构）
-  * Step 1：先执行封闭类的析构函数
-  * Step 2：执行成员对象的析构函数
+  * Step 1：执行**封闭**类的析构函数
+  * Step 2：执行**成员对象**的析构函数
 * 析构函数顺序和构造函数的调用顺序**相反**
 
-eg 2：
+eg 2：封闭类例子程序
 
 ```java
 class CTyre
@@ -86,7 +86,7 @@ class CCar{
         CEngine engine;
         CTyre tyre;
     public:
-        CCar(){cout<<"CCar contructor"<<endl;}
+        CCar(){cout<<"CCar contructor"<<endl;}    //标识构造函数和析构函数的调用
         ~CCar(){cout<<"CCar destructor"<<endl;}        
 };
 
