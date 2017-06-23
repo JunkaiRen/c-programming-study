@@ -28,4 +28,5 @@
   * [类型转换构造函数](chapter-3ff1a-lei-he-dui-xiang-jin-jie/lei-xing-zhuan-huan-gou-zao-han-shu.md)
   * [析构函数](chapter-3ff1a-lei-he-dui-xiang-jin-jie/xi-gou-han-shu.md)
   * [静态成员变量与静态成员函数](chapter-3ff1a-lei-he-dui-xiang-jin-jie/jing-tai-cheng-yuan-bian-liang-yu-jing-tai-cheng-yuan-han-shu.md)
+  * 成员对象和封闭类
 

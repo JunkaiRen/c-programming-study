@@ -33,19 +33,22 @@ class CMyclass{
 
 * **区别2**：普通成员函数必须具体作用于某个对象，而静态成员函数**不具体作用于某个对象。**
 
-       因此静态成员**不需要通过对象**就能访问。
+  因此静态成员**不需要通过对象**就能访问。
 
 ### 2. 如何访问静态成员
 
 * #### 类名::成员名
 
   **CRectangle::PrintTotal\(\); **    //访问静态成员函数
+
 * #### 对象名.成员名
 
   CRectangle r; **r.PrintTotal\(\);**
+
 * #### 指针-&gt;成员名
 
   CRectangle \* p =&r;  **p-&gt;PrintTotal\(\);**
+
 * #### 引用.成员名
 
   CRectangle & ref = r;  int n = **ref.nTotalNumber;**
@@ -86,7 +89,7 @@ CRectangle::CRectangle(int w_,int h_)    //构造函数
 }
 CRectangle::~CRectangle()    //析构函数
 {
-    nTotalNumber --;        //由于矩形对象可能消亡，比如一个局部的矩形变量，在出了包含它的函数后就消亡了，这是矩形的总数和总面积就减少了
+    nTotalNumber --;        //由于矩形对象可能消亡，比如一个局部的矩形变量，在出了包含它的函数后就消亡了，这时矩形的总数和总面积就减少了
     nTotalArea - = w*h;   //因此需要在CRectangle类的析构函数里减少TotalNumber和TotalArea。
 }
 void CRectangle::PrintTotal()
@@ -102,7 +105,7 @@ int CRectangle::nTotalArea = 0;    //在C++中必须在定义类的文件中对�
 int main()
 {
     CRectangle r1(3,3),r2(2,2);        //定义两个矩形对象
-    //Cout << CRectangle::nTotalNumber;    //虽然为静态成员变量，但是main()中不能访问私有变量，因此会报错
+    //cout << CRectangle::nTotalNumber;    //虽然为静态成员变量，但是main()中不能访问私有变量，因此会报错
     CRectangle::PrintTotal();    //输出2,13
     r1.PrintTotal();             //等价于上一条语句，而并非PrintTotal()作用在r1上。输出2,13
     return 0;
@@ -128,6 +131,7 @@ CRectangle::PrintTotal();    //解释不通，w到底是属于那个对象的
 * 此外，临时对象在消亡的时候也会调用析构函数（例如一个函数的返回值是对象的话，则这个函数的返回值就是一个临时对象），减少nToTalNumber和nTotalArea的值，可是这些临时对象在生成时并没有增加nTotalNumber和nTotalArea的值。
 
 * **解决办法**：为CRectangle类写一个复制构造函数,在这个复制构造函数里面，除了做复制的工作以外，还要对这个两个总数进行修改，这个时候就不会发生对象生成没有增加总数，对象消亡却减掉了总数这个怪异的现象。
+
   ```java
   CRectangle::CRectangle(CRectangle & r)
   {
