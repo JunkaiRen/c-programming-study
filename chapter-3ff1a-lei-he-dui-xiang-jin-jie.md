@@ -80,7 +80,18 @@ int main(){
 eg 2：封闭类例子程序
 
 ```java
-class CTyre
+class CTyre{
+    public:
+        CTyre(){cout<<"CTyre contructor"<<endl;}    ///标识构造函数和析构函数的调用
+        ~CTyre(){cout<<"CTyre destructor"<<endl;}
+};
+
+class CEngine{
+    public:
+        CEngine(){cout<<"CEngine contructor"<<endl;}    ///标识构造函数和析构函数的调用
+        ~CEngine(){cout<<"CEngine destructor"<<endl;}
+};
+    
 class CCar{
     private:
         CEngine engine;
@@ -91,9 +102,17 @@ class CCar{
 };
 
 int main(){
-    CCar car;
+    CCar car;    //封闭类类型的对象
     return 0;
 }
+——————————
+输出：
+CEngine contructor
+CTyre contructo
+CCar contructor
+CCar destructor
+CTyre destructor
+CEngine destructor
 ```
 
 
