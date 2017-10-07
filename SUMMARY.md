@@ -31,4 +31,6 @@
   * [成员对象和封闭类](chapter-3ff1a-lei-he-dui-xiang-jin-jie/cheng-yuan-dui-xiang-he-feng-bi-lei.md)
   * [友元](chapter-3ff1a-lei-he-dui-xiang-jin-jie/you-yuan.md)
   * [this指针](chapter-3ff1a-lei-he-dui-xiang-jin-jie/thiszhi-zhen.md)
+* [Tools](tools.md)
+  * [Qt](tools/qt.md)
 
