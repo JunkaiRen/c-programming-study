@@ -33,4 +33,5 @@
   * [this指针](chapter-3ff1a-lei-he-dui-xiang-jin-jie/thiszhi-zhen.md)
 * [Tools](tools.md)
   * [Qt](tools/qt.md)
+    * [Qt Creator进行C/C++开发](tools/qt/qt.md)
 
