@@ -1,5 +1,3 @@
-[Qt Creator介绍](http://blog.csdn.net/liang19890820/article/details/50004001)
-
 <div id="article_content" class="article_content tracking-ad" data-mod="popu_307" data-dsm="post">
         <div class="markdown_views"><h1 id="简介"><a name="t0" target="_blank"></a>简介</h1>
 
@@ -437,5 +435,4 @@ User Guide：用户手册</p>
    
 </div>
 
-http://blog.csdn.net/liang19890820/article/details/50004001
-
+转发自作者：一去丶二三里 博客地址：http://blog.csdn.net/liang19890820
