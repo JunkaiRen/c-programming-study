@@ -9,7 +9,7 @@
 
 ```
 int*p;    //p是一个指针，类型是int*
-char*P;    //pc是一个指针，变量pc的类型是char*
+char*pc;    //pc是一个指针，变量pc的类型是char*
 float*pf;    //pf是一个指针，变量pf的类型是float*
 ```
 
